@@ -7,10 +7,6 @@ tests/
 # Magnet files with solutions
 *_solved.mn
 
-# CAD files
-*.stp
-*.step
-
 # Igor Pro Experiments
 *.pxp
 
