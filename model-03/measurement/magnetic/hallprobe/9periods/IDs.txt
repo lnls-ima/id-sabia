@@ -1,0 +1,10 @@
+ID3775: (GV: 0; Fase: 0) (motores ligados)
+
+ID3776: Polarização horizontal K máximo (GV: -26.25; Fase: 0) (motores ligados)
+ID3777: Polarização vertical K máximo (GV: -26.25; Fase: 26.25) (motores ligados)
+ID3778: Polarização circular K máximo (GV: -26.25; Fase: 13.125) (motores ligados)
+
+ID3779: Polarização horizontal K médio (GV: -13.125; Fase: 0) (motores ligados)
+ID3780: Polarização vertical K médio (GV: -13.125; Fase: 26.25) (motores desligados)
+ID3781: Polarização circular K médio (GV: -13.125; Fase: 13.125) (motores desligados)
+
