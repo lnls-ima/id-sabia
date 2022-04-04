@@ -1,0 +1,6 @@
+Delta Sabia Undulator
+Units: X, Y = [mm]; I1=[T.m]=10**6[G.cm]; I2=[T.m²]=10**5[kG.cm²]
+Comments: Full undulator, no shimming. Phase 14 (Phase = 26.25 mm; GV = 0 mm).
+
+X	Y	I1x_mean	I1x_std	I1y_mean	I1y_std	I2x_mean	I2x_std	I2y_mean	I2y_std
+0.0	0.0	6.903883074568506e-05	8.864015708404387e-06	-9.017429629077298e-06	4.784051435420844e-06	0.00015410307359012772	4.703360968991204e-05	-5.221310281517163e-05	1.3372382311802953e-05
