@@ -23,7 +23,7 @@
 # COMMENTS
 # ========
 # 1. file generated automatically from rotating coil measurement data
-# 2. timestamp: 2022-11-17-16:51:25.755
+# 2. timestamp: 2022-11-17-17:03:16.900
 # 3. magnet_type_label: FFC
 # 4. magnet_serial_number: 01,02
 # 5. data_set: CV
@@ -41,7 +41,7 @@
 # corrector-vertical      | VKick > 0      | BXL  < 0    | -1.0        | I > 0
 # quadrupole (focusing)   | KL    > 0      | D1NL < 0    | -1.0        | I > 0
 # quadrupole (defocusing) | KL    < 0      | D1NL > 0    | -1.0        | I > 0
-# quadrupole (skew)       | KL    > 0      | D1SL > 0    | +1.0        | I > 0
+# quadrupole (skew)       | KL    < 0      | D1SL > 0    | -1.0        | I > 0
 # sextupole  (focusing)   | SL    > 0      | D2NL < 0    | -1.0        | I > 0
 # sextupole  (defocusing) | SL    < 0      | D2NL > 0    | -1.0        | I > 0
 #
