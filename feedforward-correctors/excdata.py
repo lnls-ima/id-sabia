@@ -10,6 +10,7 @@ from lnls.rotcoil import RotCoilMeas_SIFCH
 def create_excdata(serials, exc_type, currs, harms, fit_order):
     """."""
 
+    # use SIFCH as template, with adaptations
     RotCoilMeas_SIFCH.lnls_ima_path = '/home/ximenes/repos-dev/'
     RotCoilMeas_SIFCH.magnet_type_name = 'id-sabia/feedforward-correctors/'
     RotCoilMeas_SIFCH.model_version = 'model-03'
@@ -31,7 +32,7 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
         RotCoilMeas_SIFCH.conv_mpoles_sign = conv_mpoles_sign
         rcd[serial] = RotCoilMeas_SIFCH(serial_number=serial)
 
-    # get multipoles in numpy array nr_currents x nr_harmonics=
+    # get multipoles in numpy array (nr_currents x nr_harmonics)
     currents = intmpole_norm = intmpole_skew = None
     for serial, rc in rcd.items():
         intmpole_norm_ = np.zeros((rc.size, len(harms)))
@@ -91,7 +92,6 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
     with open(excdata_label + '.txt', 'w') as fp:
         for line in txt:
             fp.write(line + '\n')
-
 
     # plot
     tesla_2_gauss = 1e4
