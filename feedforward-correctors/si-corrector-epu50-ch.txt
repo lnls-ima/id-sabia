@@ -23,7 +23,7 @@
 # COMMENTS
 # ========
 # 1. file generated automatically from rotating coil measurement data
-# 2. timestamp: 2022-11-17-17:03:14.613
+# 2. timestamp: 2022-11-17-17:05:51.265
 # 3. magnet_type_label: FFC
 # 4. magnet_serial_number: 01,02
 # 5. data_set: CH
@@ -57,6 +57,7 @@
 # HKick := ConvSign * BYL / abs(Brho)
 # VKick := ConvSign * BXL / abs(Brho)
 # KL    := ConvSign * D1NL / abs(Brho)
+# KL    := ConvSign * D1SL / abs(Brho)
 # SL    := ConvSign * D2NL / abs(Brho)
 #
 # Obs:
