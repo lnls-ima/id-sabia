@@ -4,6 +4,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# https://github.com/lnls-fac/lnls
 from lnls.rotcoil import RotCoilMeas_SIFCH
 
 
@@ -18,7 +19,7 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
     RotCoilMeas_SIFCH.excitation_type = ''
 
     conv_mpoles_sign = {'ch':+1, 'cv':+1, 'qs':-1}[exc_type]
-    main_harmonic_ype = {'ch': 'normal', 'cv': 'skew', 'qs': 'skew'}[exc_type]
+    main_harmonic_type = {'ch': 'normal', 'cv': 'skew', 'qs': 'skew'}[exc_type]
     main_harmonic = {'ch': 1, 'cv': 1, 'qs': 2}[exc_type]
     main_harmonic_idx = harms.index(main_harmonic)
     excdata_label = {
@@ -71,9 +72,13 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
 
     # save excdata file
     comments = [
-        'data was fit with a polynomial of order 4 and remanent/ambient field subtracted.',
-        'data in https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil',
-        'script https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil/excdata.py'
+        ('data was fit with a polynomial of order 4 and '
+         'remanent/ambient field subtracted.'),
+        ('data in https://github.com/lnls-ima/id-sabia/tree/master/'
+         'feedforward-correctors/model-03/measurement/magnetic/rotcoil'),
+        ('script https://github.com/lnls-ima/id-sabia/tree/master/'
+         'feedforward-correctors/model-03/measurement/magnetic/'
+         'rotcoil/excdata.py'),
     ]
     txt = RotCoilMeas_SIFCH.get_excdata_text(
         pwrsupply_polarity='',
@@ -81,7 +86,7 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
         magnet_serial_number=','.join([str(serial) for serial in serials]),
         data_set=exc_type.upper(),
         main_harmonic=main_harmonic,
-        main_harmonic_type=main_harmonic_ype,
+        main_harmonic_type=main_harmonic_type,
         harmonics=harms,
         currents=currs,
         mpoles_n=intmpole_norm_fit,
@@ -114,11 +119,13 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
 
         currents_ = rc.get_currents(exc_type)
         if exc_type == 'ch':
-            intmpole = np.array(rc.get_intmpole_normal_avg(exc_type, main_harmonic))
+            intmpole = np.array(
+                rc.get_intmpole_normal_avg(exc_type, main_harmonic))
             intmpole_fit_at_zero = intmpole_norm_fit_at_zero
             intmpole_fit = intmpole_norm_fit
         else:
-            intmpole = np.array(rc.get_intmpole_skew_avg(exc_type, main_harmonic))
+            intmpole = np.array(
+                rc.get_intmpole_skew_avg(exc_type, main_harmonic))
             intmpole_fit_at_zero = intmpole_skew_fit_at_zero
             intmpole_fit = intmpole_skew_fit
 
@@ -127,7 +134,8 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
         plt.plot(currents_, coeff*intmpole2, 'o', label='FFC-' + serial)
 
     idx_fit = harms.index(main_harmonic)
-    plt.plot(currs, coeff*intmpole_fit[:, idx_fit], '.-', label='quadratic fit')
+    plt.plot(
+        currs, coeff*intmpole_fit[:, idx_fit], '.-', label='quadratic fit')
 
     plt.xlabel('Current [A]')
     plt.ylabel(labely)
