@@ -1,0 +1,25 @@
+Phase#1:  GV: 0; Fase: 0
+
+Phase#2: GV: 26.25; Fase: 0 (Polarização horizontal K máximo)
+Phase#3: GV: 26.25; Fase: -26.25 (Polarização vertical K máximo) 
+Phase#4: GV: 26.25; Fase: -13.125 (Polarização circular K máximo)
+
+Phase#5: GV: 13.125; Fase: 0 (Polarização horizontal K médio)
+Phase#6: GV: 13.125; Fase: -26.25 (Polarização vertical K médio)
+Phase#7: GV: 13.125; Fase: -13.125 (Polarização circular K médio)
+
+Phase#8: GV: 19.6875; Fase: 0
+Phase#9: GV: 19.6875; Fase: -26.25 
+Phase#10: GV: 19.6875; Fase: -13.125
+
+Phase#11: GV: 6.5625; Fase: 0
+Phase#12: GV: 6.5625; Fase: -26.25
+Phase#13: GV: 6.5625; Fase: -13.125 
+
+Phase#14: GV: 0; Fase: -26.25
+Phase#15: GV: 0; Fase: -13.125
+
+Phase#16: GV: 22.96875; Fase: 0
+Phase#17: GV: 16.40625; Fase: 0
+Phase#18: GV: 9.84375; Fase: 0
+Phase#19 : GV: 3.28125; Fase: 0
