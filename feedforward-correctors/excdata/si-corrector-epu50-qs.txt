@@ -1,35 +1,35 @@
 # HEADER
 # ======
-# label             si-corrector-epu50-ch
-# harmonics         0 2 4
-# main_harmonic     0 normal
+# label             si-corrector-epu50-qs
+# harmonics         1 5 9
+# main_harmonic     1 skew
 # rescaling_factor  1.0
-# units             Ampere  T.m T.m  T/m T/m  T/m^3 T/m^3
+# units             Ampere  T T  T/m^4 T/m^4  T/m^8 T/m^8
 
 # EXCITATION DATA
 # ===============
--0010.0000  -4.9320e-04 +1.7560e-06  +4.9066e-01 -9.5232e-03  -3.1855e+02 +1.0786e+01
--0008.0000  -3.9457e-04 +1.4416e-06  +3.9216e-01 -7.6797e-03  -2.5332e+02 +8.7245e+00
--0006.0000  -2.9596e-04 +1.0899e-06  +2.9401e-01 -5.7541e-03  -1.8927e+02 +6.5508e+00
--0004.0000  -1.9734e-04 +7.2286e-07  +1.9601e-01 -3.8072e-03  -1.2593e+02 +4.3419e+00
--0002.0000  -9.8693e-05 +3.5632e-07  +9.8035e-02 -1.8813e-03  -6.2934e+01 +2.1495e+00
+-0010.0000  -5.3688e-04 -9.5032e-02  +4.9707e+02 -3.2581e+04  +9.0950e+09 +6.6472e+10
+-0008.0000  -4.2823e-04 -7.6027e-02  +3.8830e+02 -2.6002e+04  +8.0716e+09 +5.2567e+10
+-0006.0000  -3.2102e-04 -5.7021e-02  +2.8892e+02 -1.9464e+04  +6.2464e+09 +3.8753e+10
+-0004.0000  -2.1431e-04 -3.8014e-02  +1.9342e+02 -1.2959e+04  +4.0872e+09 +2.5333e+10
+-0002.0000  -1.0743e-04 -1.9007e-02  +9.7890e+01 -6.4745e+03  +1.9342e+09 +1.2433e+10
 +0000.0000  +0.0000e+00 +0.0000e+00  +0.0000e+00 +0.0000e+00  +0.0000e+00 +0.0000e+00
-+0002.0000  +9.8727e-05 -3.4253e-07  -9.8128e-02 +1.8314e-03  +6.3042e+01 -2.1054e+00
-+0004.0000  +1.9746e-04 -6.7387e-07  -1.9633e-01 +3.6262e-03  +1.2626e+02 -4.1909e+00
-+0006.0000  +2.9617e-04 -1.0027e-06  -2.9454e-01 +5.4164e-03  +1.8964e+02 -6.3058e+00
-+0008.0000  +3.9480e-04 -1.3440e-06  -3.9263e-01 +7.2522e-03  +2.5303e+02 -8.5248e+00
-+0010.0000  +4.9328e-04 -1.7187e-06  -4.9043e-01 +9.2027e-03  +3.1622e+02 -1.0948e+01
++0002.0000  +1.0809e-04 +1.9006e-02  -1.0099e+02 +6.4770e+03  -1.6304e+09 -1.2199e+10
++0004.0000  +2.1668e-04 +3.8012e-02  -2.0424e+02 +1.2969e+04  -2.9998e+09 -2.4575e+10
++0006.0000  +3.2530e-04 +5.7018e-02  -3.0731e+02 +1.9490e+04  -4.2784e+09 -3.7716e+10
++0008.0000  +4.3324e-04 +7.6023e-02  -4.0618e+02 +2.6055e+04  -5.7643e+09 -5.2391e+10
++0010.0000  +5.3949e-04 +9.5029e-02  -4.9525e+02 +3.2677e+04  -7.8829e+09 -6.9546e+10
 
 # COMMENTS
 # ========
 # 1. file generated automatically from rotating coil measurement data
-# 2. timestamp: 2022-11-17-17:05:51.265
+# 2. timestamp: 2023-06-01-16:57:46.537
 # 3. magnet_type_label: FFC
 # 4. magnet_serial_number: 01,02
-# 5. data_set: CH
+# 5. data_set: QS
 # 6. data was fit with a polynomial of order 4 and remanent/ambient field subtracted.
 # 7. data in https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil
-# 8. script https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil/excdata.py
+# 8. script https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/excdata/excdata.py
 
 # POLARITY TABLE
 # ==============

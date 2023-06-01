@@ -8,16 +8,25 @@ import matplotlib.pyplot as plt
 from lnls.rotcoil import RotCoilMeas_SIFCH
 
 
+COMMENTS = [
+        ('data was fit with a polynomial of order 4 and '
+         'remanent/ambient field subtracted.'),
+        ('data in https://github.com/lnls-ima/id-sabia/tree/master/'
+         'feedforward-correctors/model-03/measurement/magnetic/rotcoil'),
+        ('script https://github.com/lnls-ima/id-sabia/tree/master/'
+         'feedforward-correctors/excdata/excdata.py'),
+    ]
+
+# use SIFCH as template, with adaptations
+RotCoilMeas_SIFCH.lnls_ima_path = '/home/ximenes/repos-dev/'
+RotCoilMeas_SIFCH.magnet_type_name = 'id-sabia/feedforward-correctors/'
+RotCoilMeas_SIFCH.model_version = 'model-03/'
+RotCoilMeas_SIFCH.magnet_type_label = 'FFC'
+RotCoilMeas_SIFCH.excitation_type = ''
+
+
 def create_excdata(serials, exc_type, currs, harms, fit_order):
     """."""
-
-    # use SIFCH as template, with adaptations
-    RotCoilMeas_SIFCH.lnls_ima_path = '/home/ximenes/repos-dev/'
-    RotCoilMeas_SIFCH.magnet_type_name = 'id-sabia/feedforward-correctors/'
-    RotCoilMeas_SIFCH.model_version = 'model-03'
-    RotCoilMeas_SIFCH.magnet_type_label = 'FFC'
-    RotCoilMeas_SIFCH.excitation_type = ''
-
     conv_mpoles_sign = {'ch':+1, 'cv':+1, 'qs':-1}[exc_type]
     main_harmonic_type = {'ch': 'normal', 'cv': 'skew', 'qs': 'skew'}[exc_type]
     main_harmonic = {'ch': 1, 'cv': 1, 'qs': 2}[exc_type]
@@ -71,15 +80,6 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
         intmpole_skew_fit[:, i] = intmpole_fit_
 
     # save excdata file
-    comments = [
-        ('data was fit with a polynomial of order 4 and '
-         'remanent/ambient field subtracted.'),
-        ('data in https://github.com/lnls-ima/id-sabia/tree/master/'
-         'feedforward-correctors/model-03/measurement/magnetic/rotcoil'),
-        ('script https://github.com/lnls-ima/id-sabia/tree/master/'
-         'feedforward-correctors/model-03/measurement/magnetic/'
-         'rotcoil/excdata.py'),
-    ]
     txt = RotCoilMeas_SIFCH.get_excdata_text(
         pwrsupply_polarity='',
         magnet_type_label='FFC',
@@ -92,7 +92,7 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
         mpoles_n=intmpole_norm_fit,
         mpoles_s=intmpole_skew_fit,
         filename=excdata_label,
-        comments=comments
+        comments=COMMENTS
     )
     with open(excdata_label + '.txt', 'w') as fp:
         for line in txt:
@@ -143,6 +143,7 @@ def create_excdata(serials, exc_type, currs, harms, fit_order):
     plt.legend()
     plt.title(title)
     plt.tight_layout()
+    plt.savefig(excdata_label + '.png')
     plt.show()
 
     

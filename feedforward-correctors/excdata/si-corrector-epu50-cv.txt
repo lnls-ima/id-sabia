@@ -23,13 +23,13 @@
 # COMMENTS
 # ========
 # 1. file generated automatically from rotating coil measurement data
-# 2. timestamp: 2022-11-17-17:05:53.685
+# 2. timestamp: 2023-06-01-16:57:44.903
 # 3. magnet_type_label: FFC
 # 4. magnet_serial_number: 01,02
 # 5. data_set: CV
 # 6. data was fit with a polynomial of order 4 and remanent/ambient field subtracted.
 # 7. data in https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil
-# 8. script https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/model-03/measurement/magnetic/rotcoil/excdata.py
+# 8. script https://github.com/lnls-ima/id-sabia/tree/master/feedforward-correctors/excdata/excdata.py
 
 # POLARITY TABLE
 # ==============
